@@ -38,7 +38,7 @@
 										{% endfor %}
 									</p>
 									<a href="{% url "catalog:task-update" pk=task.id %}" class="nav-link text-primary d-inline">Update</a>
-									<a href="#" class="nav-link text-primary d-inline">Delete</a>
+									<a href="{% url "catalog:task-delete" pk=task.id %}" class="nav-link text-primary d-inline">Delete</a>
 								</div>
 
 							</div>
