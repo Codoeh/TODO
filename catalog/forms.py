@@ -8,8 +8,10 @@ class TaskForm(forms.ModelForm):
         queryset=Tag.objects.all(),
         widget=forms.CheckboxSelectMultiple,
     )
-    deadline = forms.DateTimeField(required=False,
-    widget=forms.DateTimeInput(attrs={'type': 'date'}))
+    deadline = forms.DateTimeField(
+        required=False,
+        widget=forms.DateTimeInput(
+            attrs={'type': 'date'}))
 
     class Meta:
         model = Task

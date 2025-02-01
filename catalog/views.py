@@ -15,7 +15,9 @@ class TaskListView(ListView):
     context_object_name = "task_list"
 
     def get_queryset(self):
-        return Task.objects.all().order_by("is_done", "-created").prefetch_related("tags")
+        return (Task.objects.all().
+                order_by("is_done", "-created").
+                prefetch_related("tags"))
 
 
 @method_decorator(login_required, name="dispatch")
