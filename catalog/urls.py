@@ -9,7 +9,7 @@ from .views import (
 urlpatterns = [
     path("", TaskListView.as_view(), name="task-list"),
     path("tags/", TagListView.as_view(), name="tag-list"),
-    path("tasks/create/", TaskCreateVeiw.as_view(), name="task-create"),
+    path("tasks/create/", TaskCreateView.as_view(), name="task-create"),
 ]
 
 app_name = "catalog"
