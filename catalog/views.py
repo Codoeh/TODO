@@ -44,3 +44,9 @@ class TagCreateView(CreateView):
     model = Tag
     form_class = TagForm
     success_url = reverse_lazy("catalog:tag-list")
+
+
+class TagUpdateView(UpdateView):
+    model = Tag
+    form_class = TagForm
+    success_url = reverse_lazy("catalog:tag-list")
