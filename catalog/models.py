@@ -23,6 +23,6 @@ class Task(models.Model):
         return f"{'[✓] ' if self.is_done else '[ ] '} {self.content[:50]}"
 
     class Meta:
-        ordering = ["is_done", ]
+        ordering = ["is_done", "-created",]
         verbose_name = "Task"
         verbose_name_plural = "Tasks"
