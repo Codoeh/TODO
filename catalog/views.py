@@ -6,3 +6,8 @@ from catalog.models import Task, Tag
 class TaskListView(ListView):
     model = Task
     template_name = "catalog/task_list.html"
+
+
+class TagListView(ListView):
+    model = Tag
+    template_name = "catalog/tag_list.html"
