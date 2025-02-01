@@ -1,8 +1,11 @@
 asgiref==3.8.1
 black==25.1.0
+bootstrap4==0.1.0
 click==8.1.8
 colorama==0.4.6
+crispy-bootstrap4==2024.10
 Django==5.1.5
+django-crispy-forms==2.3
 flake8==7.1.1
 mccabe==0.7.0
 mypy-extensions==1.0.0
