@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
-from catalog.forms import TaskForm
+from catalog.forms import TaskForm, TagForm
 from catalog.models import Task, Tag
 
 
@@ -38,3 +38,9 @@ def TaskCompleteUndo(request, pk):
 class TagListView(ListView):
     model = Tag
     template_name = "catalog/tag_list.html"
+
+
+class TagCreateView(CreateView):
+    model = Tag
+    form_class = TagForm
+    success_url = reverse_lazy("catalog:tag-list")
