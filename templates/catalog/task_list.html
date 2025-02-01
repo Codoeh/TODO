@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-
 {% block content %}
 	<div class="container mt-3">
 		<div class="d-flex justify-content-between mb-3">
@@ -8,7 +7,6 @@
 				<a href="{% url "catalog:task-create" %}" class="btn btn-primary">Add task</a>
 			</div>
 		</div>
-
 		{% if task_list %}
 			<ul class="list-group">
 				{% for task in task_list %}
@@ -40,7 +38,6 @@
 									<a href="{% url "catalog:task-update" pk=task.id %}" class="nav-link text-primary d-inline">Update</a>
 									<a href="{% url "catalog:task-delete" pk=task.id %}" class="nav-link text-primary d-inline">Delete</a>
 								</div>
-
 							</div>
 							<div class="d-flex align-items-center">
 								{% if task.is_done %}
@@ -48,7 +45,6 @@
 								{% else %}
 									<a href="{% url "catalog:task-complete-undo" pk=task.id %}" class="btn btn-success btn-sm me-2">Complete</a>
 								{% endif %}
-
 							</div>
 						</div>
 					</li>
