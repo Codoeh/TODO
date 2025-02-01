@@ -50,3 +50,8 @@ class TagUpdateView(UpdateView):
     model = Tag
     form_class = TagForm
     success_url = reverse_lazy("catalog:tag-list")
+
+
+class TagDeleteView(DeleteView):
+    model = Tag
+    success_url = reverse_lazy("catalog:tag-list")
